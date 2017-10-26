@@ -21,5 +21,8 @@ persons = json.loads(data.text)['results']
 for person in persons:
     print(person['personal'], person['family'], person['email'], person['tasks'])
 
+# person['tasks'] is a URL, will need to run requests on that to get all tasks
 
+# Use loop not to print but to populate dictionary of all instructors
 
+# Above code works for one page of API results. Will need to loop through to get all pages.

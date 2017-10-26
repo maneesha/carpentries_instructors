@@ -18,6 +18,8 @@ data = requests.get('https://amy.software-carpentry.org/api/v1/persons/?badges=2
 persons = json.loads(data.text)['results']
 
 
+for person in persons:
+    print(person['personal'], person['family'], person['email'], person['tasks'])
 
 
 

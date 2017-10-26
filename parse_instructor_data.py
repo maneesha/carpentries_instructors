@@ -12,7 +12,12 @@ except:
 
 data = requests.get('https://amy.software-carpentry.org/api/v1/persons/?badges=2&badges=5&username=&personal=&middle=&family=&email=&may_contact=1&is_instructor=1&o=lastname', auth=HTTPBasicAuth(local_settings.user, local_settings.pw))
 
-print(data.text)
+# print(data.text)
+
+# Pull just the persons records & transform to python dictionary
+persons = json.loads(data.text)['results']
+
+
 
 
 

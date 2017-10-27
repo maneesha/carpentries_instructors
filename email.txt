@@ -1,0 +1,13 @@
+
+
+# This will not be the actual email text.
+# Placeholder text during development.
+
+
+Dear {{ name }}
+
+Thanks for teaching with us!
+
+Our records show you're closest to this airport: {{ airport }}
+
+Our records show you've taught at these workshops: {{ workshops }}

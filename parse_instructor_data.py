@@ -47,7 +47,6 @@ def create_instructor_dictionary(data):
 
         instructors.append(d)
 
-    print(instructors)
-
+    return instructors
 
 # Above code works for one page of API results. Will need to loop through to get all pages.

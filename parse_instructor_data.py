@@ -18,8 +18,15 @@ data = requests.get('https://amy.software-carpentry.org/api/v1/persons/?badges=2
 persons = json.loads(data.text)['results']
 
 
-for person in persons:
+for person in persons[10:11]:
     print(person['personal'], person['family'], person['email'], person['tasks'])
+    airport = person['airport'].split("/")[-2]
+    print(airport)
+    workshops = requests.get(person['tasks'], auth=HTTPBasicAuth(local_settings.user, local_settings.pw))
+    print(type(workshops.text))
+    workshops = json.loads(workshops.text)
+    for workshop in workshops:
+        print(workshop['event'].split("/")[-2], workshop['role'])
 
 # person['tasks'] is a URL, will need to run requests on that to get all tasks
 

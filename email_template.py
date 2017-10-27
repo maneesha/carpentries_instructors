@@ -1,7 +1,9 @@
 import parse_instructor_data
 import jinja2
 
-persons_data = parse_instructor_data.requests.get('https://amy.software-carpentry.org/api/v1/persons/?badges=2&badges=5&username=&personal=&middle=&family=&email=&may_contact=1&is_instructor=1&o=lastname', auth=parse_instructor_data.HTTPBasicAuth(parse_instructor_data.local_settings.user, parse_instructor_data.local_settings.pw))
+url = 'https://amy.software-carpentry.org/api/v1/persons/?badges=2&badges=5&is_instructor=1&may_contact=1&o=lastname&page=1'
+
+persons_data = parse_instructor_data.requests.get(url, auth=parse_instructor_data.HTTPBasicAuth(parse_instructor_data.local_settings.user, parse_instructor_data.local_settings.pw))
 
 instructors = parse_instructor_data.create_instructor_dictionary(persons_data)
 

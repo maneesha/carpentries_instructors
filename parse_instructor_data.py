@@ -17,23 +17,27 @@ data = requests.get('https://amy.software-carpentry.org/api/v1/persons/?badges=2
 # Pull just the persons records & transform to python dictionary
 persons = json.loads(data.text)['results']
 
+instructors = []
 
 for person in persons[10:20]:
-    print("PERSONAL NAME: ", person['personal'])
-    print("FAMILY NAME: ", person['family'])
-    print("EMAIL: ", person['email'])
+    d = {}
 
     airport = person['airport'].split("/")[-2]
-    print("AIRPORT: ", airport)
-    
-    print("WORKSHOPS AND ROLE: ")
+
     workshops = requests.get(person['tasks'], auth=HTTPBasicAuth(local_settings.user, local_settings.pw))
     workshops = json.loads(workshops.text)
+    workshops_list = []
     for workshop in workshops:
-        print(workshop['event'].split("/")[-2], workshop['role'])
+        workshops_list.append(workshop['event'].split("/")[-2] + " " + workshop['role'])
 
-# person['tasks'] is a URL, will need to run requests on that to get all tasks
+    d['full name'] = person['personal'] + " " +  person['family']
+    d['email'] = person['email']
+    d['airport'] = person['airport']
+    d['workshops'] = workshops_list
 
-# Use loop not to print but to populate dictionary of all instructors
+    instructors.append(d)
+
+print(instructors)
+
 
 # Above code works for one page of API results. Will need to loop through to get all pages.

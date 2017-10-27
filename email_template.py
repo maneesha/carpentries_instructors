@@ -10,7 +10,7 @@ with open("email.txt") as fp:
 
 template = jinja2.Template(email_template)
 
-for instructor in instructors[0:2]:
+for instructor in instructors:
     
     email_body = template.render(name=instructor['full name'], airport=instructor['airport'], workshops=instructor['workshops'] )
 

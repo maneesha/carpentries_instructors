@@ -22,8 +22,11 @@ instructors = []
 for person in persons:
     d = {}
 
-    airport = person['airport'].split("/")[-2]
-
+    if person['airport']:
+        airport = person['airport'].split("/")[-2]
+    else:
+        airport = "unknown"
+        
     workshops = requests.get(person['tasks'], auth=HTTPBasicAuth(local_settings.user, local_settings.pw))
     workshops = json.loads(workshops.text)
     workshops_list = []
@@ -32,7 +35,7 @@ for person in persons:
 
     d['full name'] = person['personal'] + " " +  person['family']
     d['email'] = person['email']
-    d['airport'] = person['airport']
+    d['airport'] = airport
     d['workshops'] = workshops_list
 
     instructors.append(d)

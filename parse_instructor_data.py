@@ -19,7 +19,7 @@ persons = json.loads(data.text)['results']
 
 instructors = []
 
-for person in persons[10:20]:
+for person in persons:
     d = {}
 
     airport = person['airport'].split("/")[-2]

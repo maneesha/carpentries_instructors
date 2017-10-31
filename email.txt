@@ -1,12 +1,31 @@
+Dear {{ name }},
 
+As you may know, Software Carpentry and Data Carpentry are merging into a new organization, called “The Carpentries”. This new organization will officially begin on January 1, 2018, with a hugely talented and dedicated community already in place.
 
-# This will not be the actual email text.
-# Placeholder text during development.
+You may already have seen a <a href="https://software-carpentry.org/blog/2017/10/call-new-joint-board.html">blog post</a> announcing elections for the new Carpentries board which outlines who can stand for election and vote, and how to stand for election.
 
+We want to make sure our records list all the workshops you have participated in. Having an accurate, up-to-date list of who is eligible to participate in elections, as a nominee, and/or voter is important to us. Eligibility to vote and run for election is primarily based on having taught at least two workshops within the past two years. Other contributions, such as lesson maintenance and sub-committee work can be recognized as membership by the steering committee at their discretion. Please take a look at the list of workshops below and email <a href="mailto:team@carpentries.org>team@carpentries.org</a> by November 15th if any of your workshops are missing.
 
-Dear {{ name }}
+If you have supplied your GitHub username, you will be able to log in to our <a href="https://amy.software-carpentry.org/workshops/">internal database</a> and make sure all the other information you have given us is up to date.  You will be able to see things like your preferred airport and email address, as well as your domain and teaching skill set. This information allows us to match you to workshops you may want to teach, so please update anything that may have recently changed.  Please email <a href="mailto:team@carpentries.org>team@carpentries.org</a> if you have any trouble logging in.
 
-Thanks for teaching with us!
+We want send you a token of our thanks for your continued participation in the Carpentries community by sending you stickers for many of the NumFOCUS projects, including Software and Data Carpentry.  Please fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2qf788AIDm5_kmfb4QgUWYinahXKlK2E6FU4zJbiX-MZ8AQ/viewform">form</a> before November 15th, and we will send the stickers to the mailing address you provide. We will not store these addresses in our records - all mailing information will be deleted once the stickers have been sent.
+
+Thank you for all you do for the Carpentries -  our rapid growth as a community is a direct result of the time, energy, and enthusiasm that, you, our volunteers, share with the world. Your contributions make the Carpentries what they are. Thank you!  
+
+Belinda, Elizabeth, Erin, Jonah, Karen, Kari, Maneesha, SherAaron, Tracy
+
+---------
 
 Our records show you're closest to this airport: {{ airport }}
-Our records show you've taught at these workshops: {{ workshops }}
+
+Our records show you have the following teaching certificates. Keep in mind that with either certificate you can teach both Software Carpentry and Data Carpentry workshops.  
+{% for badge in badges %}
+        {{ badge }}
+    {% endfor %}
+
+
+Our records show you've participated in these workshops:
+{% for workshop in workshops %}
+        {{ workshop }}
+    {% endfor %}
+

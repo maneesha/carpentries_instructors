@@ -20,12 +20,12 @@ Our records show you're closest to this airport: {{ airport }}
 
 Our records show you have the following teaching certificates. Keep in mind that with either certificate you can teach both Software Carpentry and Data Carpentry workshops.  
 {% for badge in badges %}
-        {{ badge }}
-    {% endfor %}
+- {{ badge }}
+{%- endfor %}
 
 
 Our records show you've participated in these workshops:
 {% for workshop in workshops %}
-        {{ workshop }}
-    {% endfor %}
+- {{ workshop }}
+{%- endfor %}
 

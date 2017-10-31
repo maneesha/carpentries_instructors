@@ -14,6 +14,7 @@ template = jinja2.Template(email_template)
 
 for instructor in instructors:
     
-    email_body = template.render(name=instructor['full name'], airport=instructor['airport'], workshops=instructor['workshops'] )
+    email_body = template.render(name=instructor['full name'], airport=instructor['airport'], workshops=instructor['workshops'], badges=instructor['badges'] )
 
     print(email_body)
+    

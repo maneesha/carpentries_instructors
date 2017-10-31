@@ -29,7 +29,7 @@ def create_instructor_dictionary(data):
         workshops = json.loads(workshops.text)
         workshops_list = []
         for workshop in workshops:
-            workshops_list.append(workshop['event'].split("/")[-2] + " " + workshop['role'])
+            workshops_list.append(workshop['event'].split("/")[-2] + " as a " + workshop['role'])
 
 
         badges = requests.get(person['awards'], auth=HTTPBasicAuth(local_settings.user, local_settings.pw))

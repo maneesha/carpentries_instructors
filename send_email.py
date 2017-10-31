@@ -14,7 +14,9 @@ with open("email.txt") as fp:
 template = jinja2.Template(email_template)
 
 for instructor in instructors:
-    email_body = template.render(name=instructor['full name'], airport=instructor['airport'], workshops=instructor['workshops'] )
+
+    email_body = template.render(name=instructor['full name'], airport=instructor['airport'], workshops=instructor['workshops'], badges=instructor['badges'] )
 
     #send_util.send_email(instructor['email'],'Please update your Software/Data Carpentry Instructor Information', email_body)
+   
     print(email_body)

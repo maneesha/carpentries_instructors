@@ -23,7 +23,7 @@ def send_email(email_to,email_subject,email_body,email_from="the Carpentries Tea
     msg['Subject'] = email_subject
     msg['From'] = email_from
     msg['To'] = email_to
-    msg.attach(MIMEText(email_body, 'plain'))
+    msg.attach(MIMEText(email_body, 'html'))
     to_address = email_to
     from_address = email_from
     server.sendmail(from_address, to_address, msg.as_string())

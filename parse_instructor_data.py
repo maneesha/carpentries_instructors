@@ -1,7 +1,7 @@
 import sys
 import requests
 from requests.auth import HTTPBasicAuth
-import json
+import ujson as json
 
 try:
     import local_settings
@@ -10,9 +10,13 @@ except:
     print("Local settings not found")
     sys.exit(1)
 
+s = requests.Session()
+s.auth = (local_settings.user, local_settings.pw)
+s.get("https://amy.software-carpentry.org/api/v1/")
 
 def create_instructor_dictionary(data):
 # Pull just the persons records & transform to python dictionary
+
     persons = json.loads(data.text)['results']
 
     instructors = []
@@ -24,15 +28,15 @@ def create_instructor_dictionary(data):
             airport = person['airport'].split("/")[-2]
         else:
             airport = "unknown"
-            
-        workshops = requests.get(person['tasks'], auth=HTTPBasicAuth(local_settings.user, local_settings.pw))
+
+        workshops = s.get(person['tasks'])
         workshops = json.loads(workshops.text)
         workshops_list = []
         for workshop in workshops:
             workshops_list.append(workshop['event'].split("/")[-2] + " as a " + workshop['role'])
 
 
-        badges = requests.get(person['awards'], auth=HTTPBasicAuth(local_settings.user, local_settings.pw))
+        badges = s.get(person['awards'])
         badges = json.loads(badges.text)
         badges_list = []
         for badge in badges:

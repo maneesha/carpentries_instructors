@@ -13,14 +13,14 @@ For those of you new to the community, we look forward to you planning your firs
 <p>
 If you have supplied your GitHub username to us in the past, you will be able to log in to the <a href="https://amy.software-carpentry.org/workshops/">AMY database</a> and make sure all the other information you have given us is up to date.  You will be able to see things like your preferred airport and email address, as well as your domain and teaching skill set. This information allows us to match you to workshops you may want to teach, so please update anything that may have recently changed.  Please email <a href="mailto:team@carpentries.org">team@carpentries.org</a> with your GitHub username if you have any trouble logging in.
 <p>
-<b>FREE STICKERS!!</b>: We want send you a token of our thanks for your continued participation in the Carpentries community by sending you stickers for many of the NumFOCUS projects, including Software and Data Carpentry.  Please fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2qf788AIDm5_kmfb4QgUWYinahXKlK2E6FU4zJbiX-MZ8AQ/viewform">form</a> before November 15th, and we will send the stickers to the mailing address you provide. We will not store these addresses in our records - all mailing information will be deleted once the stickers have been sent.
+<b>FREE STICKERS!!</b>: We want to send you a token of our thanks for your continued participation in the Carpentries community by sending you stickers for many of the NumFOCUS projects, including Software and Data Carpentry.  Please fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2qf788AIDm5_kmfb4QgUWYinahXKlK2E6FU4zJbiX-MZ8AQ/viewform">form</a> before November 15th, and we will send the stickers to the mailing address you provide. We will not store these addresses in our records - all mailing information will be deleted once the stickers have been sent.
 <p>
 Thank you for all you do for the Carpentries -  our rapid growth as a community is a direct result of the time, energy, and enthusiasm that, you, our volunteers, share with the world. Your contributions make the Carpentries what they are. Thank you!
 <p>
 <b>SUMMARY:</b>
 <ol>
 <li>Please notify us of any missing workshops in your teaching record below</li>
-<li>Collect your stickers</li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc2qf788AIDm5_kmfb4QgUWYinahXKlK2E6FU4zJbiX-MZ8AQ/viewform">Get your stickers</a></li>
 <li><a href="http://eepurl.com/cfODMH">Subscribe to</a> our bi-weekly newsletter, and catch up on <a href="http://us14.campaign-archive2.com/home/?u=46d7513c798c6bd41e5f58f4a&id=50c3e6d6fe">the archives</a>
 </ol>
 <p>
